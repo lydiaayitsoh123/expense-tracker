@@ -37,7 +37,7 @@ body,
 .expense-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgb(0, 0, 0);
+  background: rgb(168, 158, 158);
 }
 
 .expense-table th,
@@ -48,13 +48,13 @@ body,
 }
 
 .expense-table th {
-  background-color: #000000;
+  background-color: #080808;
   cursor: pointer;
 }
 
 button {
   padding: 6px 10px;
-  background: rgb(252, 1, 1);
+  background: rgb(41, 38, 38);
   color: rgb(253, 253, 253);
   border: none;
   cursor: pointer;
@@ -62,7 +62,7 @@ button {
 }
 
 button:hover {
-  background: darkred;
+  background: rgb(8, 8, 8);
 }
 
 input {
