@@ -18,7 +18,7 @@ function ExpenseForm(props) {
 
     props.onAddExpense(newExpense);
 
-    // Clear the form
+
     setDescription('');
     setCategory('');
     setAmount('');
@@ -50,6 +50,7 @@ function ExpenseForm(props) {
       />
       <input
         type="date"
+        placeholder="date"
         value={date}
         onChange={function (e) { setDate(e.target.value); }}
         required
