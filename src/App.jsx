@@ -33,16 +33,13 @@ function App() {
     }
   };
 
-  const filteredExpenses = expenses
-    .filter((expense) =>
-      expense.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .sort((a, b) => {
-      if (!sortBy) return 0;
-      const aVal = a[sortBy];
-      const bVal = b[sortBy];
-      return sortOrder === 'asc' ? (aVal > bVal ? 1 : -1) : (aVal < bVal ? 1 : -1);
-    });
+  const filteredExpenses = [];
+  expenses.forEach((expense) => {
+    if (expense.description.toLowerCase().includes(searchTerm.toLowerCase())) {
+      filteredExpenses.push(expense);
+    }
+  });
+  
 
   return (
     <div className="app">
@@ -58,9 +55,7 @@ function App() {
         <ExpenseTable
           expenses={filteredExpenses}
           onDeleteExpense={deleteExpense}
-          onSort={handleSort}
-          sortBy={sortBy}
-          sortOrder={sortOrder}
+          
         />
       </main>
     </div>
